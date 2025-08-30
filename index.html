@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Genetics Study Tool</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Genetics Study Tool</h1>
+    <div id="login-section">
+      <input type="email" id="email" placeholder="Email"/>
+      <input type="password" id="password" placeholder="Password"/>
+      <button onclick="login()">Login</button>
+      <button onclick="signup()">Sign Up</button>
+    </div>
+    <div id="study-section" style="display:none;">
+      <h2>Welcome, <span id="user-email"></span></h2>
+      <div id="flashcards">
+        <h3>Flashcards</h3>
+        <div id="card" onclick="flipCard()">Click to Flip</div>
+        <button onclick="nextCard()">Next</button>
+      </div>
+      <div id="quiz">
+        <h3>Quiz</h3>
+        <div id="question"></div>
+        <div id="options"></div>
+      </div>
+      <div id="progress">
+        <h3>Progress</h3>
+        <p>Flashcards Reviewed: <span id="flashcard-count">0</span></p>
+        <p>Quiz Score: <span id="quiz-score">0</span></p>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
